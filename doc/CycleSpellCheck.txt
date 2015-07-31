@@ -1,0 +1,59 @@
+*cyclespellcheck.txt*	For Vim version 7.3 and above	Last change: 2015 Mar 04
+
+			>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<
+			>>>>>>> cyclespellcheck <<<<<<<
+			>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<
+
+Author:  Daniel Opitz
+
+==============================================================================
+						*CycleSpellCheck* *CycleSpellCheck-contents*
+1. Contents~
+
+	1. Contents .................: |CycleSpellCheck-contents|
+	2. About ....................: |CycleSpellCheck-about|
+	3. Configuration ............: |CycleSpellCheck-configure|
+	4. ThisArg ..................: |CycleSpellCheck-CycleSpellCheck|
+        A. Change History ...........: |CycleSpellCheck-changes|
+
+==============================================================================
+							*CycleSpellCheck-about*
+2. About~
+
+Small plugin so that choosing from a list of spell checking languages is made
+simple and easy. Lets you define a list of languages and quickly cycling
+through them.
+
+==============================================================================
+							*CycleSpellCheck-configure*
+3. Configuration~
+
+This scrips is so small it does not deserve any setup/configuration. In fact 
+there is no such thing since this script delivers 1 command that do simple 
+stuff that does not need to be configured (almost). Theres two things you can
+do in your ~.vimrc and one thing you have to do:
+
+	1.) Define the languages to be used (default is only "en_en"):
+	let g:cycle_spell_check_modes = ["en_en", "de_de"]
+
+	2.) Define what language to use at startup (default is disabled):
+	let g:cycle_spell_check_indicator = 0
+
+	3.) Define a pretty hotkey:
+	nnoremap <leader>sc call CycleSpellCheck()
+
+==============================================================================
+							*CycleSpellCheck-CycleSpellCheck*
+4. CycleSpellCheck~
+
+Simply calls sets the spelling to the next item in the spell check modes list.
+When the end of the list is reached disables spell checking. After that starts
+again at the first item in the modes list - easy.
+
+==============================================================================
+							*CycleSpellCheck-changes*
+A. Change History~
+
+	- None so far...
+
+vim:tw=78:sts=8:ts=8:sw=8:noet:ft=help:
